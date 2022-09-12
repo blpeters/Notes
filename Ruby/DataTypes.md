@@ -1,4 +1,6 @@
-# Basic Data Types
+# Data Types
+
+## Basic Data Types
 
 Numbers, Strings, symbols, booleans
 
@@ -16,7 +18,7 @@ Numbers, Strings, symbols, booleans
 
 ### Booleans
 
-# Data Structures
+## Data Structures
 
 ### Arrays
 
@@ -24,6 +26,6 @@ Numbers, Strings, symbols, booleans
 
 -Similar to Objects in Javascript
 
-# Expressions and Return
+## Expressions and Return
 
 `=>` is called a "hash rocket", which shows the return expression
