@@ -68,3 +68,7 @@ my_numbers = [5, 6, 7, 8]
 my_numbers.reduce(1000) { |sum, number| sum + number}
 # => 1026
 ```
+
+## Predicate Enumerable Methods
+
+There's several methods, but the common predicate enumerable methods are #include, #all?, #none?, #any?, and one?
