@@ -27,3 +27,15 @@ A Ruby File object is a subclass of IO, and the most well known.
   - Represents a UNIX domain stream client socket.
 - Socket
   - Provides access to underlying operating system socket implementations. It can be used to provide more operating system specific functionality than the protocol-specific socket classes.
+
+### StringIO
+
+Allows strings to behave like IOs. Able to use strings into systems that consume streams.
+
+This one does not actually inherit from IO class but is it's own thing.
+
+### Tempfile
+
+Similar to StringIO, does not inherit from IO. It implements File's interface and deals with temporary files.
+
+It can be passed to any object taht consumes IO-like objects, so I guess it can be considered a duck type.
