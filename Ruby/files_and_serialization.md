@@ -1,13 +1,21 @@
 # Files and Serialization
 
+Serialization is taking complex data structures and "flattening" them into a string that can be sent to other users/machines and reconstructed.
+
 ## Learning Outcomes
 
 - What are two ways to store a file from your hard drive into a string or array in your Ruby script?
 - What are three things made possible or much easier by serialization?
 - What is JSON?
+  - Javascript Object Notation. A common serialization format. All elements are comma separated, arrays by brackets, objects by curly braces.
 - What is YAML?
+  - Another serialization format/notation where the number of spaces determine the level of nesting.
+  - This format allows it to be more easily read by humans. Used in Rails
+  - Stands for YAML Ain't Markup Language
 - How do you turn a Ruby object into JSON?
+  - Using the JSON ruby module.
 - How do you turn JSON into a Ruby object?
+  - Using the JSON ruby module.
 
 ## IO Class
 
