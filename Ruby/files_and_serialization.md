@@ -5,7 +5,8 @@ Serialization is taking complex data structures and "flattening" them into a str
 ## Learning Outcomes
 
 - What are two ways to store a file from your hard drive into a string or array in your Ruby script?
--
+  - File.open with read on and read file into a string variable.
+  - File.open and use readlines to store individual lines into an array variable.
 - What are three things made possible or much easier by serialization?
   - Transferring large amounts of data, quickly writing scripts to files, quickly reading information from a file, sending objects/data structures.
 - What is JSON?
@@ -27,8 +28,7 @@ Serialization is taking complex data structures and "flattening" them into a str
 -
 - What are the benefits of YAML vs JSON vs MessagePack serialization formats?
   - YAML is very human readable, JSON is written in Javascript so it's built for the web and also human readable and almost identical format to Ruby hash format, MessagePack is built for speed.
-- How would you check if a file exists using the File object in the command line?
--
+- ## How would you check if a file exists using the File object in the command line?
 - In a Download directory containing 5 files, how would you count the number of files in that directory using the Dir object?
 
 ## IO Class
@@ -83,3 +83,8 @@ puts contents
 ```
 
 Keep in mind calling read again on file would try to continue reading from where it left off (the end of the file)
+
+#### readline and readlines Methods
+
+`#readline` will read a single line at a time.
+`#readlines` will read all content, but store each line in an array, splitting the file contents by line breaks.
