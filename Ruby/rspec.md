@@ -39,3 +39,33 @@ use if there is an if or an if else, etc. use context for various paths through 
 `eq` returns an RSpec matcher that simply tests if the object passed to expect is equal to the object passed to eq.
 
 In the RSpec docs, there's many matchers pre-defined, and you can even define your own.
+
+## Mocks, Doubles, Stubs, etc
+
+useful in tests when the method being tested relies on results from outside methods or information at the boundary of our code and external "things" like HTTP requests or information from a hard drive. We can recreate these necessary snippets or functionality in testing.
+
+### Stubs
+
+rspec has a built-in library called rspec-mocks. Mocha is another popular library, among others.
+
+from the rspec docs:
+
+`allow(dbl).to receive(:foo).with(1).and_return(14)`
+
+which basically says to allow an object (dbl) to "receive" a certain method call (:foo), with a certain argument (1), and return a certain value (14). So, this entire message send/receive is "faked" in the test itself to be able to isolate and test the subject component. In this context, maybe the `dbl` object in the actual program references something in a database, so can't be independently or easily tested on the local machine.
+
+### Mocks
+
+Mocks are similar to stubs, albeit different. Mocks are there to make assertions about methods being called during your tests. It doesn't replace the method being called, but rather asserts that the method actually is being called.
+
+### Spies
+
+Verifies that a stubbed method has been called after the fact.
+
+## Double Objects
+
+A double object is a fake object that can "double" as a more complicated object, while limiting the necessary scope to what is required for the test.
+
+## When to use mocks, stubs, spies, doubles?
+
+The answer is a complicated 'it depends'. However, if your application talks to an external API then that would be a very clear case for needing some combination of these to test. You don't want external calls in your tests - They make testing super slow and impossible to work on offline. Use a stub to fake the call to the external system.
