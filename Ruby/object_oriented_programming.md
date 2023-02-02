@@ -18,4 +18,10 @@ Where a class inherits the behaviors of another class (superclass). Helps progra
 
 The inclusion of a module in with a class using `include` is called a mixin. This allows the behaviors of the module to be available to the class and its objects
 
-## Objects
+## Dependency Injection
+
+dependency injection is a coding practice that allows you to ove a dependency from the guts of a class to the arguments of a method that needs it - often in the initialization
+
+This is the D in SOLID - Dependency Inversion Principle
+
+We need to avoid situations where a class has a strict dependency on the internal workings of another class. USE DEPENDENCY INJECTION - take whatever code is directly referencing another new object and throw it up into the arguments of the current method and name it. That way, you can easily mock that argument in the case of unit testing. Also, if the API of the other class changes, in the future, we simply adjust the way the dependency is referenced in the arguments, but the method remains unchanged!!
